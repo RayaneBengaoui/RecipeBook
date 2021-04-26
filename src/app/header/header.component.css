@@ -1,0 +1,14 @@
+.nav-header {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+}
+ul {
+  display: flex;
+}
+
+a {
+  padding-left: 1rem;
+}
