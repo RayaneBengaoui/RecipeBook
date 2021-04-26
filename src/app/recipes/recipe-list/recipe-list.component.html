@@ -5,15 +5,10 @@
 </div>
 <div class="row">
   <div class="col">
-    <a href="#" *ngFor="let recipe of recipes">
-      <div class="left">
-        <h4>{{ recipe.name }}</h4>
-        <p>{{ recipe.description }}</p>
-      </div>
-      <div class="right">
-        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" />
-      </div>
-    </a>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes"
+      [recipe]="recipeEl"
+      (recipeSelected)="onRecipeSelected(recipeEl)"
+    ></app-recipe-item>
   </div>
 </div>
