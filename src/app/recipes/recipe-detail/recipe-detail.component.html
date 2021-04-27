@@ -12,7 +12,7 @@
   <div class="col">
     <button>Manage Recipe</button>
     <ul>
-      <li><a href="">To Shopping List</a></li>
+      <li><a href="#" (click)="onAddToShoppingList()">To Shopping List</a></li>
       <li><a href="">Edit Recipe</a></li>
       <li><a href="">Delete Recipe</a></li>
     </ul>
@@ -22,5 +22,11 @@
   <div class="col">{{ recipe.description }}</div>
 </div>
 <div class="row">
-  <div class="col">Ingredients</div>
+  <div class="col">
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
 </div>
